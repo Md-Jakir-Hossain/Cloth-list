@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Cloth from "../Cloth/Cloth";
 import "./DynamicForm.css";
+import { GetItem } from "../ItemGet/ItemGet";
 
 const DynamicForm = () => {
-  const [formData, setFormData] = useState([]);
+  const [formData, setFormData] = useState(GetItem());
   const [terms, setTerms] = useState(false);
 
   const handleSubmit = (e) => {
@@ -43,6 +44,9 @@ const DynamicForm = () => {
     const filtered = formData.filter((data, index) => data.id !== id);
     setFormData(filtered);
   };
+  useEffect(() => {
+    localStorage.setItem("formData", JSON.stringify(formData));
+  }, [formData]);
 
   return (
     <div className="container">
