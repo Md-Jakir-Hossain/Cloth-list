@@ -1,0 +1,25 @@
+button {
+  padding: 5px 30px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid beige;
+  border-radius: 5px;
+}
+.submit:enabled {
+  background: rgb(22, 140, 208);
+  color: #fff;
+}
+.submit:enabled:hover {
+  background: #0390fb;
+  box-shadow: 0 0 5px #10ff4c;
+  text-shadow: 0 0 5px #3b3b37;
+}
+
+.remove {
+  width: 100%;
+  background: beige;
+}
+.remove:hover {
+  background: rgb(253, 12, 12);
+  color: #fff;
+}
